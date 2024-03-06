@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Practica 1.2</title>
+	<meta charset="utf-8">
+</head>
+<body >
+	<header align="center">
+		<h1 style="font-size: 400%">Venta en linea</h1>
+	</header>
+	<form method="post":action=" "enctype="text/plain">
+		<fieldset>
+			<legend>Información General</legend>
+			<table align="center">
+				<tbody >
+					<tr>
+						<td>
+							<label for="usuario">Nombre</label><br/>
+							<input type="text" name="usuario" maxlength="25" placeholder="Nombre" title="Nombre" required><br/>
+						</td>
+						<td>
+							<label for="usuario">Apellido Paterno</label><br/>
+							<input type="text" name="usuario" maxlength="25" placeholder="Apellido Paterno"><br/>
+						</td>
+						<td>
+							<label for="usuario">Apellido Materno</label><br/>
+							<input type="text" name="usuario" maxlength="25" placeholder="Apellido Meterno"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="usuario">Nombre del Usuario</label><br/>
+							<input type="text" name="usuario" maxlength="15" placeholder="Usuario" required><br/>
+						</td>
+						<td>
+							<label for="pass">Contraseña</label><br/>
+							<input type="password" name="pass" id="pass" maxlength="25" placeholder=" Pasword"required><br/>
+                  		</td>
+						<td>
+							<label for="Fechan">Fecha de Nacimineto</label><br/>
+							<input type="date" name="Fechan" id="Fechan">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+		</fieldset>
+		<fieldset>
+			<legend>Datos de facturación</legend>
+			<table align="center">
+				<tbody>
+					<tr>
+						<td>
+							<label for="paises">País</label><br/>
+							<input type="text" list="paises">
+							<datalist id="paises">
+								<option>México</option>
+								<option>Canadá</option>
+								<option>E.U.A</option>
+								<option>Alemania</option>
+								<option>China</option>
+								<option>Colombia</option>
+								<option>Chipre</option>
+								<option>Marruecos</option>
+							</datalist>
+
+						</td>
+						<td>
+							<label for="ciudad">Ciudades</label><br/>
+							<input type="text" list="ciudad">
+							<datalist id="ciudad">
+								<option>San Luis Potosi</option>
+								<option>Brooks</option>
+								<option>Monterrey</option>
+								<option>Chihuahua</option>
+								<option>Hermosillo</option>
+								<option>Matehuala</option>
+								<option>Bogotá</option>
+								<option>Medellín</option>
+								<option>Barranquilla</option>
+								<option>Pasto</option>
+								<option>Berín</option>
+								<option>Hamburgo</option>
+								<option>Múnich</option>
+								<option>Pekín</option>
+								<option>Shanghai</option>
+								<option>Shenzhen</option>
+								<option>Edmonton</option>
+							</datalist>
+						</td>
+						<td>
+							<label for="calle">Calle</label><br/>
+							<input type="text" name="calle" maxlength="15" placeholder="Calle"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="numcas">Numero de casa</label><br/>
+							<input type="number" name="numcas" maxlength="10" placeholder="Número exterior"><br/>
+						</td>
+						<td>
+							<label for="col">Colonia</label><br/>
+							<input type="text" name="col" maxlength="10" placeholder="Colonia"><br/>
+						</td>
+						<td>
+							<label for="correo">E-mail</label><br/>
+							<input type="email" name="correo" id="correo" required placeholder="E-mail"><br/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="rfc">R.F.C.</label><br/>
+							<input type="text" name="rfc" id="rfc" required placeholder="R.F.C"><br/>
+						</td>
+						<td>
+							<label for="cp">Código Postal</label><br/>
+							<input type="number" name="cp" id="Código Postal" placeholder="Código Postal" ><br/>
+						</td>
+						<td>
+							<input type="submit" name="Envio" id="envio" value="Enviar formulario">
+							<input type="reset" name="borrar" value="Restablecer" id="borrar">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
