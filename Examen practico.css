@@ -1,0 +1,81 @@
+
+.ibm-plex mono-medium-italic {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: italic;
+}
+#logo{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 30px;
+    padding: 15px;
+}
+footer {
+    background-color: #92a884;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    padding: 15px;
+    bottom: 0;
+}
+#der {
+		position: fixed;
+		top: 160px;
+		right: 200px;
+		padding: 20px;
+    float: right;
+    margin-right: 20px;
+    align-content: rigth;
+}
+li{
+	list-style-type: none;
+}
+li a {
+    float: left;
+    background-color: #92a884;
+    color: white;
+    padding: 20px;
+    align: center;
+    text-decoration: none;
+    display: block;
+    width: 14%;
+	margin: 10px;
+}
+li a:hover {
+    background-color: #59baa4;
+    color: white;
+    text-decoration: none;
+    padding: 25px;
+    width: 14%;
+		margin: 10px;
+}
+p{
+  width: 600px;
+  margin-top: 10px; 
+  float: left;
+  margin-left: 55px;
+}
+input[type="submit"]{
+		background-color: #59baa4;
+		display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%; 
+    border: none;
+}
+input[type="text"]{
+		display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 95%; 
+    border: none;
+    border-bottom: 2px solid black; 
+}
+input[type="password"]{
+		display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 95%; 
+    border: none;
+    border-bottom: 2px solid black; 
+}
