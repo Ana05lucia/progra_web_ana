@@ -1,0 +1,34 @@
+
+.texto {
+  background-color: orange;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+
+}
+
+.texto:hover {
+  background-color: #aea313;
+  color: lightgray;
+  border-radius: 25px;
+  text-align: center;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  transform: skew(-25deg);
+  -moz-transform: skew(-25deg);
+  -webkit-transform: skew(-25deg);
+}
+
+.texto:active {
+  background-color: green;
+  color: lightgray;
+  text-align: center;
+  box-shadow: 20px 30px  7px 1px #030012;;/*isent es inetrna la sombra*/
+  -moz-box-shadow: 20px 30px 7px 1px #030012;
+  -webkit-box-shadow:20px 30px  7px 1px #030012;
+}
+p{
+  font-size: 45px;
+}
