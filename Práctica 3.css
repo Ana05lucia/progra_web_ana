@@ -1,6 +1,17 @@
+p{
+  font-size: 50px;
+  font-family: "Cinzel", serif;
+  text-decoration: none;
+}
 a{
     text-decoration: none;
     }
+.cinzel-<uniquifier> {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
 .texto {
   background-color: orange;
   color: white;
@@ -8,7 +19,6 @@ a{
   border-radius: 20px;
   border: none;
   text-align: center;
-
 }
 
 .texto:hover {
@@ -21,6 +31,7 @@ a{
   transform: skew(-25deg);
   -moz-transform: skew(-25deg);
   -webkit-transform: skew(-25deg);
+  
 }
 
 .texto:active {
@@ -30,7 +41,6 @@ a{
   box-shadow: 20px 30px  7px 1px #030012;;/*isent es inetrna la sombra*/
   -moz-box-shadow: 20px 30px 7px 1px #030012;
   -webkit-box-shadow:20px 30px  7px 1px #030012;
+
 }
-p{
-  font-size: 45px;
-}
+
