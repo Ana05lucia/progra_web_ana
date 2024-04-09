@@ -2,7 +2,7 @@ body {
   background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
   background-size: cover; 
   background-repeat: no-repeat;
- 
+ background-attachment: fixed;
 }
 header{
 	display: flex;
@@ -10,7 +10,7 @@ header{
 	align-items: center;
 	padding: 20px 60px;
 }
-nav {
+nav a{
 	font-weight: 600;
 	padding-right: 100px;
 }
@@ -35,11 +35,43 @@ nav ul li {
 }
 @font-face{
 	font-family: "parrafos";
-	src: url("8-bit Arcade Out.ttf") format("truetype");
+	src: url("Nicolast.ttf") format("truetype");
 }
 #titulo1{
 	text-align: center;
 	color: white;
 	font-family: 'parrafos';
-	font-size: 180px;
+	font-size: 170px;
+}#titulo2{
+	text-align: center;
+	color: white;
+	font-family: 'parrafos';
+	font-size: 100px;
 }
+#titulo{
+	text-align: center;
+	font-size: 45px;
+	margin-top: 20 px;
+	color: white;
+	background-color: #2D4F8A;
+}
+#fon{
+	background-color: #2D4F8A
+}
+.caja3{
+	display: inline-block;
+	width: 500px;
+	height: 700px;
+	background-color: #408DD9;
+	margin-bottom: 70px;
+	padding: 50px;
+}
+.caja4{
+	display: inline-block;
+	width: 500px;
+	height: 700px;
+	background-color: #408DD9;
+	margin-bottom: 70px;
+	padding: 40px;
+}
+
