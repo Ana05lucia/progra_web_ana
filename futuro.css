@@ -1,0 +1,31 @@
+body {
+  background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+  background-size: cover; 
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #1B4E7A; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+#t1{
+	background-color: #6691d4;
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}

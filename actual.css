@@ -1,0 +1,48 @@
+body {
+  background-image: url('https://enprimerasanluis.mx/wp-content/uploads/2020/05/INVERTIR-EN-TECNOLOGIA.png');
+  background-size: cover; 
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #1B4E7A; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+h1,h3{
+  color: black;
+  background-color: #FF7214;
+  text-align: center;
+}
+.caja1{
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  background-color: #FFA012;
+  margin-bottom: 40px;
+}
+.caja2{
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  background-color: #FFA012;
+  margin-bottom: 40px;
+}
+.caja3{
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  background-color: #FFA012;
+  margin-bottom: 40px;
+}
