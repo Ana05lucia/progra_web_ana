@@ -1,0 +1,46 @@
+body{
+	background-image: url('https://thumbs.dreamstime.com/b/fondo-antiguo-de-la-aventura-del-vintage-ciencia-educaci-n-viaje-equipo-historia-y-geograf-estilo-retro-148443647.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #1B4E7A; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+#his{
+	text-align: center;
+	font-size: 45px;
+	margin-top: 20 px;
+	color: white;
+	background-color: #804B1C;
+}
+#fon{
+	background-color: #804B1C
+}
+.caja5{
+	align: rigth;
+	width: 500px;
+	height: 500px;
+	background-color: #AB6426;
+	margin-bottom: 70px;
+}
+.caja6{
+	align: left fixed;
+	width: 500px;
+	height: 500px;
+	background-color: #AB6426;
+	margin-bottom: 70px;
+}

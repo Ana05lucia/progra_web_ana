@@ -1,0 +1,27 @@
+body{
+	background-color: black;
+}
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #1B4E7A; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+tr{
+	align:center;
+}
+h1{
+	color: white;
+	align:center;
+	font-size: 100px;
+}
