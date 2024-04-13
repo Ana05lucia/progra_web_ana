@@ -1,0 +1,16 @@
+body{
+	background-image: url('https://image.freepik.com/vector-gratis/nino-lindo-nino-feliz-aprendiendo-escuela_97632-1578.jpg');
+	background-size: cover;
+  	background-position: justify;
+  	background-repeat: no-repeat;
+}
+#principal {
+  background-color: white; 
+  width: 150px; 
+  height: 150px;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  text-align: center; 
+}
