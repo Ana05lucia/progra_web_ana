@@ -1,0 +1,24 @@
+/*form {
+  width: 300px;
+  margin: 0 auto;
+}*/
+
+input[type="text"],input[type="email"],input[type="date"],input[type="tel"],select {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
