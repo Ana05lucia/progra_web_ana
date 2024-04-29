@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+	<link rel="stylesheet" type="text/css" href="evaluarC.css">	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<!-- siempre para convertir a pdf copiar todos-->
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==20)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==15)
+        	document.getElementById("comentario").innerHTML="Regular!!";
+        else
+        	if(total<=15)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(40);
+//Color del texto
+doc.setTextColor(9,7,121);
+doc.text(40, 20, "Conceptos basicos");
+doc.setTextColor(17, 122, 209); //Color en formato RGB
+doc.setFontSize(30);
+doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 3 preguntas correctas");
+doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+    <div id="contiene">
+	<h1>Responde la encuesta sobre Disney</h1>
+	<h2>Adivina el personaje</h2>
+<div>
+	<form>
+	<ul>
+
+		<li>Este personaje tiene botas,sombreo,y tiene un mejor amigo ¿Quién es?</li>
+		<input type="radio" name="r1" id="r1" value="0"/>Gato con botas<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Peter Pan<br/>
+		<input type="radio" name="r1" id="r1" value="5"/>Woody<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Jessie<br/>
+<br/>	
+		<li>¿Quién pierde la zapatilla?</li>
+		<input type="radio" name="r2" id="r2" value="0"/>Blancanieves<br/>
+		<input type="radio" name="r2" id="r2" value="5"/>Cenicienta<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Moana<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>Aurora<br/>
+<br/>
+		<li>¿Quién dice la siguiente frase "Wasauski no ordenasta tu papeleo anoche"</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Mike <br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Sullivan<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Celia<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Roz<br/>
+<br/>
+        <li>Completa la siguiente frase "Volar cual cohete,..."</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Rapido como flash<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Atacar como bólido<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Potente como un camión<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Atacar como rayo<br/>
+<br/>
+		<li>¿Cuál es la mascota de Mickey?</li>
+		<input type="radio" name="r5" id="r5" value="5">Pluto<br/>
+		<input type="radio" name="r5" id="r5" value="0">Paco<br/>
+		<input type="radio" name="r5" id="r5" value="0">Pepe<br/>
+		<input type="radio" name="r5" id="r5" value="0">Lucas<br/>
+<br/>
+		<li>¿Cómo se llama el cangrejo de Ariel?</li>
+		<input type="radio" name="r6" id="r6" value="0">Sabas<br/>
+		<input type="radio" name="r6" id="r6" value="5">Sebastián<br/>
+		<input type="radio" name="r6" id="r6" value="0">Samuel<br/>
+		<input type="radio" name="r6" id="r6" value="0">Sergio<br/>
+<br/>
+		<li>¿Cómo se llama el caballo de Woody?</li>
+		<input type="radio" name="r7" id="r7" value="0">Timoteo<br/>
+		<input type="radio" name="r7" id="r7" value="0">Teodoro<br/>
+		<input type="radio" name="r7" id="r7" value="5">Tiro al Blanco<br/>
+		<input type="radio" name="r7" id="r7" value="0">Tormenta<br/>
+<br/>
+		<li>¿Cómo se llama los personajes que dicen  “hakuna matata”?</li>
+		<input type="radio" name="r8" id="r8" value="5">Timón y pumba <br/>
+		<input type="radio" name="r8" id="r8" value="0"> Mushu y cricri<br/>
+		<input type="radio" name="r8" id="r8" value="0">Buzz y Woody<br/>
+		<input type="radio" name="r8" id="r8" value="0">Winnie pooh y piglet<br/>
+<br/>
+		<li>¿Princesa muere por morder una manzana? </li>
+		<input type="radio" name="r9" id="r9" value="5"> Blanacanieves<br/>
+		<input type="radio" name="r9" id="r9" value="0">Aurora<br/>
+		<input type="radio" name="r9" id="r9" value="0">Mulan<br/>
+		<input type="radio" name="r9" id="r9" value="0">Merida<br/>
+<br/>
+		<li>¿Princesa que convierte a su mamá en oso?</li>
+		<input type="radio" name="r10" id="r10" value="0">Elsa<br/>
+		<input type="radio" name="r10" id="r10" value="5">Merida<br/>
+		<input type="radio" name="r10" id="r10" value="0">Raya<br/>
+		<input type="radio" name="r10" id="r10" value="0">Moana<br/>
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>

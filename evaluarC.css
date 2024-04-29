@@ -1,0 +1,15 @@
+body{
+	background-image: url("https://th.bing.com/th/id/OIP.zZEBVr1z4Lr4nB0w90M7IwHaEK?rs=1&pid=ImgDetMain");
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+h1,h2{
+	text-align: center;
+}
+div{
+ background-color:rgba(255, 255, 255, 0.7) ;
+ padding: 20px;
+ font-size: 18px;
+ color: #333;
+}
