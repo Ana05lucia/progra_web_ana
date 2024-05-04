@@ -1,0 +1,45 @@
+header{
+	background-color: black;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+nav a{
+	font-weight: 600;
+	padding-right: 100px;
+}
+.nav-link {
+  text-decoration: none; /* Elimina el subrayado */
+  color: white; /* Establece el color del texto */
+  padding: 10px 20px; /* Agrega espacio alrededor del texto */
+  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+}
+.nav-link:hover {
+  background-color: #68c5b7; /* Nuevo color de fondo */
+  color: #fff; /* Nuevo color de texto */
+}
+nav ul {
+  list-style: none; 
+  display: flex; 
+  padding: 0;
+  margin: 0; 
+}
+nav ul li {
+  margin-right: 20px; 
+}
+body{
+	background-image: url("https://th.bing.com/th/id/R.d71ffe92e329bee086b2d2e87efaf2be?rik=3DrWfEfCi2bm9A&pid=ImgRaw&r=0");
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+h1,h2{
+	text-align: center;
+}
+div{
+ background-color:rgba(255, 255, 255, 0.7) ;
+ padding: 20px;
+ font-size: 18px;
+ color: #333;
+}
