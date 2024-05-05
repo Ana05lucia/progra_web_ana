@@ -1,0 +1,40 @@
+.carousel {/*Estilos para la clase carousel*/
+  position: relative;
+  max-width: 600px;/*Limita el ancho maximo a 600px*/
+  margin: auto;/*Centra horizontalmente */
+  overflow: hidden;/*Oculta el exeso de la imagen*/
+}
+
+
+.carousel-content {
+  display: flex;/*Las imagenes se muestran en una fila horizontalmente*/
+}
+
+.carousel-content img {
+  width: 100%;/*La imagen ocupe todo el ancho del carusel ya establecido */
+  display: none;/*Las imagenes estan ocultas */
+}
+
+.carousel-content img.active {
+  display: block;/*Cuando a la imagen tiene active se muestra */
+}
+
+button {
+  position: absolute;
+  top: 50%;/*El boton se coloca verticalmente en el centro del carrusel*/
+  transform: translateY(-50%);/*Asegura que los botones se centren correctamente*/
+  background: rgba(0, 0, 0, 0.5);/*Fondo semitransparente para los botones*/
+  color: white;/*Color de la letra de los botones es blanco*/
+  border: none;/*Se elimina el borde de los botones*/
+  padding: 10px;/*Espacio de los botones alrededor del texto del boton*/
+  cursor: pointer;/*Cambia el cursor a una manita cundo se pasa por los botones */
+}
+
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"><!-- La etiqueta <html> envuelve todo el contenido del documento HTML. El atributo lang especifica el idioma del documento (en este caso, inglés).-->
+<head>
+  <meta charset="UTF-8"><!--Admite caracters especiales-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Configura la escala para dispositivos móviles-->
+  <title>Carrousel</title><!--Titulo de la pag web-->
+  <link rel="stylesheet" href="styles.css"><!--Se enlaza una hoja de estilos externos -->
+</head>
+<body>
+  <div class="carousel"><!--Contenedor para el carruser el imagenes que se le puede aplicar estilos o funciones -->
+    <button id="prevBtn">&#10094;</button><!--Un botón para retroceder en el carrusel.-->
+    <div class="carousel-content"><!--Contiene la imagenes-->
+      <!--Aquí se encuentran las imagenes con su ruta y un texto alternativo
+      -->
+      <img src="imagen1.jpg" alt="Image 1">
+      <img src="imagen2.jpg" alt="Image 2">
+      <img src="imagen3.jpg" alt="Image 3">
+    </div>
+    <button id="nextBtn">&#10095;</button><!--Un botón para avanzar en el carrusel.-->
+  </div>
+
+  <script src="scripts.js"></script><!--Enlaza un archivo JavaScript externo llamado “scripts.js”. Esto permite agregar interactividad al carrusel.-->
+</body>
+</html>
