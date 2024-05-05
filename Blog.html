@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Apuntes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="Blog.js"></script>
+	<link rel="stylesheet" type="text/css" href="Blog.css">
+</head>
+<body>
+	<nav>
+		<a href="Bi" class="nav-link">Inicio</a>
+		<a href="His" class="nav-link">Historia</a>
+		<a href="obj" class="nav-link">Objetivo</a>
+		<a href="a" class="nav-link">¿Qué se espera?</a>
+		<a href="f" class="nav-link">Visión a Futuro</a>
+		<a href="Ima" class="nav-link">Imagenes</a>
+		<a href="V" class="nav-link">Videos</a>
+		<a href="FormularioBi" class="nav-link">Formulario</a>
+	</nav>
+</br>
+	<h1>Blog de notas </h1>
+	<h2>Realiza las notas que necesites</h2>
+	<section id="cajaformulario">
+		<form name="formulario">
+			<p>Tema: <br><input type="text" name="clave" id="clave"></p>
+			<p>Información: <br><textarea name="text" id="texto"></textarea></p>
+			<p><input type="button" name="grabar" id="grabar"
+			value="Guardar"></p>
+			<p><input type="button" name="eliminar" id="eliminar"
+			value="Borrar datos" onclick="elimina()"></p>
+		</form>
+	</section>
+	<section id="cajadatos">
+	Aún no registras información
+	</section>
+</body>
+</html>
