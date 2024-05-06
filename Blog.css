@@ -36,8 +36,9 @@ body{
 }
 /* Estilos para la caja del formulario */
 #cajaformulario {
-    display: flex;
-    float: left;
+    /*display: flex;
+    float: left;*/
+    margin:auto;
     padding: 20px;
     border: 1px solid #999999;
     background-color:rgba(255, 255, 255, 0.7) ;
@@ -46,9 +47,10 @@ body{
 /* Estilos para la caja de datos */
 #cajadatos {
 
-    float: left;
+    /*float: left;
+     margin-left: 20px;*/
     width: 400px;
-    margin-left: 20px;
+    margin:auto;
     padding: 20px;
     border: 1px solid #999999;
     background-color:rgba(255, 255, 255, 0.7) ;
