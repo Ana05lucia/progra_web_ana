@@ -5,9 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Galeria</title>
 	<link rel="stylesheet" type="text/css" href="imagenes.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Danfo&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
+<header><!--es el navegador -->
 	<nav>
 		<a href="BigData.html" class="nav-link">Inicio</a>
 		<a href="Historia.html" class="nav-link">Historia</a>
@@ -19,23 +22,41 @@
 		<a href="FormularioBigData.html" class="nav-link">Formulario</a>
 	</nav>
 </header>
+<h1 class="danfo">Galeria</h1>
+<div class="carousel"><!--Contenedor para el carruser el imagenes que se le puede aplicar estilos o funciones -->
+	<button id="prevBtn">&#10094;</button><!--Un botón para retroceder en el carrusel.-->
+	<div class="carousel-content"><!--Contiene la imagenes-->
+		<!--Aquí se encuentran las imagenes con su ruta y un texto alternativo-->
+		<img src="imagen1.jpg" alt="Image 1">
+		<img src="imagen2.jpg" alt="Image 2">
+		<img src="imagen3.jpg" alt="Image 3">
+	</div>
+	<button id="nextBtn">&#10095;</button><!--Un botón para avanzar en el carrusel.-->
+</div>
+	<script src="imagenes.js"></script>
 <table>
-<caption><h1>Galeria</h1></caption>
+	<br>
+<caption></caption>
 		<tbody>
 			<tr>
-				<td ><img src="https://th.bing.com/th/id/OIP.BwKNaSsP8qKvAunY6K4AuAAAAA?rs=1&pid=ImgDetMain";width="200"height="250"> </td>
-				<td ><img src="https://th.bing.com/th/id/R.d8897bc880a967ce4c2968d1f541571b?rik=wjupoahZQ7DM1g&pid=ImgRaw&r=0";width="200"height="250">  </td>
-				<td><img src="https://th.bing.com/th/id/R.e2d2091cac745643854dbb3fb51f45e9?rik=1R4%2fY167qUsq4A&pid=ImgRaw&r=0";width="200"height="250"></td>
+				<td> <img src="https://i.pinimg.com/originals/f7/e8/1c/f7e81c64089240637f0972d5a1ead0a7.jpg"> </td>
+				<td> <img src="https://cdn.memegenerator.es/imagenes/memes/full/19/60/19606911.jpg"> </td>
+				<td> <img src="https://i.imgflip.com/1v1sg7.jpg"></td>
 			</tr>
 			<tr>
-				<td> <img src="https://th.bing.com/th/id/OIP.WVUlhV5vsV-daq96wYie3gHaEK?rs=1&pid=ImgDetMain";width="200"height="250"> </td>
-				<td> <img src="https://interlat.co/wp-content/uploads/2020/05/59915-2048x1363.jpg";width="200"height="250"> </td>
-				<td> <img src="https://i2.wp.com/architecnologia.es/wp-content/uploads/2019/08/c-lenguaje-programacion.jpg?resize=800%2C445&ssl=1";width="200"height="250"></td>
+				<td> <img src="https://th.bing.com/th/id/OIP.BwKNaSsP8qKvAunY6K4AuAAAAA?rs=1&pid=ImgDetMain"> </td>
+				<td> <img src="https://th.bing.com/th/id/R.d8897bc880a967ce4c2968d1f541571b?rik=wjupoahZQ7DM1g&pid=ImgRaw&r=0">  </td>
+				<td> <img src="https://th.bing.com/th/id/R.e2d2091cac745643854dbb3fb51f45e9?rik=1R4%2fY167qUsq4A&pid=ImgRaw&r=0"></td>
 			</tr>
 			<tr>
-				<td> <img src="https://th.bing.com/th/id/OIP.OujxJewFB-q_B7UrcxTFhQHaE7?rs=1&pid=ImgDetMain";width="200"height="250"> </td>
-				<td> <img src="https://appelit.com/wp-content/uploads/2020/08/scrum-app-coding.jpg";width="200"height="250"> </td>
-				<td><img src="https://th.bing.com/th/id/OIP.3SQATD4whKPdHomA8NKzUgHaE8?rs=1&pid=ImgDetMain"alt="imagen de Referencia";width="200"height="250"></td>
+				<td> <img src="https://th.bing.com/th/id/OIP.WVUlhV5vsV-daq96wYie3gHaEK?rs=1&pid=ImgDetMain"> </td>
+				<td> <img src="https://interlat.co/wp-content/uploads/2020/05/59915-2048x1363.jpg"> </td>
+				<td> <img src="https://i2.wp.com/architecnologia.es/wp-content/uploads/2019/08/c-lenguaje-programacion.jpg?resize=800%2C445&ssl=1"></td>
+			</tr>
+			<tr>
+				<td> <img src="https://th.bing.com/th/id/OIP.OujxJewFB-q_B7UrcxTFhQHaE7?rs=1&pid=ImgDetMain"> </td>
+				<td> <img src="https://appelit.com/wp-content/uploads/2020/08/scrum-app-coding.jpg"> </td>
+				<td><img src="https://th.bing.com/th/id/OIP.3SQATD4whKPdHomA8NKzUgHaE8?rs=1&pid=ImgDetMain"alt="imagen de Referencia"></td>
 			</tr>
 			
 		</tbody>
