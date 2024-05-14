@@ -1,11 +1,13 @@
-body{
-	background-color: black;
-}
+/*Navegador*/
 header{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	padding: 20px 60px;
+}
+nav a{
+	font-weight: 600;
+	padding-right: 100px;
 }
 .nav-link {
   text-decoration: none; /* Elimina el subrayado */
@@ -14,14 +16,90 @@ header{
   transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
 }
 .nav-link:hover {
-  background-color: #1B4E7A; /* Nuevo color de fondo */
+  background-color: #68c5b7; /* Nuevo color de fondo */
   color: #fff; /* Nuevo color de texto */
 }
-tr{
-	align:center;
+nav ul {
+  list-style: none; 
+  display: flex; 
+  padding: 0;
+  margin: 0; 
+}
+nav ul li {
+  margin-right: 20px; 
+}
+/*extras*/
+body{
+	background-color: black;
 }
 h1{
+	font-family: 'Danfo', serif ;
 	color: white;
-	align:center;
+	text-align:center;
 	font-size: 100px;
 }
+
+.danfo {
+  font-family: "Danfo", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:"ELSH" 0;
+}
+
+/*Carrusel*/
+.carousel {/*Estilos para la clase carousel*/
+  position: relative;
+  max-width: 600px;/*Limita el ancho maximo a 600px*/
+  margin: auto;/*Centra horizontalmente */
+  overflow: hidden;/*Oculta el exeso de la imagen*/
+}
+.carousel-content {
+  display: flex;/*Las imagenes se muestran en una fila horizontalmente*/
+}
+
+.carousel-content img {
+  width: 100%;/*La imagen ocupe todo el ancho del carusel ya establecido */
+  display: none;/*Las imagenes estan ocultas */
+}
+
+.carousel-content img.active {
+  display: block;/*Cuando a la imagen tiene active se muestra */
+}
+button {
+  position: absolute;
+  top: 50%;/*El boton se coloca verticalmente en el centro del carrusel*/
+  transform: translateY(-50%);/*Asegura que los botones se centren correctamente*/
+  background: rgba(0, 0, 0, 0.5);/*Fondo semitransparente para los botones*/
+  color: white;/*Color de la letra de los botones es blanco*/
+  border: none;/*Se elimina el borde de los botones*/
+  padding: 10px;/*Espacio de los botones alrededor del texto del boton*/
+  cursor: pointer;/*Cambia el cursor a una manita cundo se pasa por los botones */
+}
+#prevBtn {
+  left: 0;
+}
+
+#nextBtn {
+  right: 0;
+}
+/*Tabla de imagenes*/
+table {
+    width: 90%; /* Asegura que la tabla use todo el ancho disponible */
+    margin: auto; /* Centra la tabla horizontalmente */
+}
+
+td {
+		width: 200px;
+    text-align: center; /* Centra el contenido de cada celda */
+    vertical-align: middle; /* Alinea verticalmente el contenido en el medio */
+}
+
+td img {
+    max-width: 100%; /* Establece un ancho máximo para la imagen */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    display: block; /* La imagen se comporta como un bloque */
+    margin: auto; /* Centra la imagen horizontalmente */
+    object-fit: contain; /* Asegura que la imagen se ajuste al contenedor sin perder proporciones */
+}
+
