@@ -33,13 +33,13 @@ function califica()
         total=total+res;
         document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
         }
-        if(total==20)
+        if(total==50)
         	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
         else
-        	if(total==15)
-        	document.getElementById("comentario").innerHTML="Regular!!";
+        	if(total==25)
+        	document.getElementById("comentario").innerHTML="Regular!!,podrias mejorar más";
         else
-        	if(total<=15)
+        	if(total<=12)
         	document.getElementById("comentario").innerHTML="Estudia un poco más";
     }
 
@@ -50,18 +50,18 @@ function generar(){
 var doc = new jsPDF();
 
 //Definir el tamaño de la letra
-doc.setFontSize(40);
+doc.setFontSize(55);
 //Color del texto
-doc.setTextColor(9,7,121);
-doc.text(40, 20, "Conceptos basicos");
-doc.setTextColor(17, 122, 209); //Color en formato RGB
-doc.setFontSize(30);
-doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+doc.setTextColor(93,138,168);
+doc.text(40, 20, "Calificación");
+doc.setTextColor(250,84,81); //Color en formato RGB
+doc.setFontSize(20);
+doc.text(50, 35, "En base a lo que se respondio"); //Ubicación, Texto
 doc.setTextColor(0,0,0);
 doc.setFontSize(10);
-doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
-doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 3 preguntas correctas");
-doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+doc.text(20, 50, "50 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "25 puntos. Regular. \r La mitad del cuestionario esta correto ");
+doc.text(20, 90, "12 puntos. \r Un cuarto de tus respuestas son correctas, intenta de nuevo");
 
 //doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
 
