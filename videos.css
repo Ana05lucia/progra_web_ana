@@ -4,6 +4,20 @@ body {
   background-repeat: no-repeat;
  background-attachment: fixed;
 }
+h1{
+	font-family: 'Danfo', serif ;
+	color: white;
+	text-align:center;
+	font-size: 100px;
+}
+
+.danfo {
+  font-family: "Danfo", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:"ELSH" 0;
+}
 header{
 	display: flex;
 	justify-content: space-between;
