@@ -1,38 +1,95 @@
+
+/***Navegador***/
+header {
+    background-color:  rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente */
+  padding: 20px 60px; /* Espaciado alrededor del contenido del header */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas múltiples */
+  border-bottom: 1px solid #fff;
+  backdrop-filter: blur(10px);
+  position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos de navegación se ajusten en líneas múltiples */
+  justify-content: center; /* Centra los elementos de navegación */
+  width: 100%; /* Asegura que la navegación ocupe todo el ancho disponible */
+}
+
+.nav-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Establece el color del texto */
+    padding: 10px 20px; /* Agrega espacio alrededor del texto */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+    flex-grow: 1; /* Permite que los enlaces crezcan para llenar el espacio */
+    text-align: center; /* Alinea el texto de los enlaces al centro */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+}
+
+.nav-link:hover {
+    background-color: #68c5b7; /* Nuevo color de fondo al pasar el mouse */
+    color: black; /* Nuevo color de texto al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeñas */
+    }
+}
+/*fondo*/
 body {
   background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
   background-size: cover; 
   background-repeat: no-repeat;
  background-attachment: fixed;
 }
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 60px;
-}
-.nav-link {
-  text-decoration: none; /* Elimina el subrayado */
-  color: white; /* Establece el color del texto */
-  padding: 10px 20px; /* Agrega espacio alrededor del texto */
-  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
-}
-.nav-link:hover {
-  background-color: #1B4E7A; /* Nuevo color de fondo */
-  color: #fff; /* Nuevo color de texto */
-}
-.caja1{
-	box-align: center;
-	width: 500px;
-	height: 710px;
-	background-color: #1D3E60;
-	margin-bottom: 70px;
-	color: white;
-	font-size: 20px;
-}
+/*Titulo*/
 h1{
 	text-align: center;
-	font-size: 45px;
+	font-size: 100px;
 	margin-top: 20 px;
 	color: white;
 	background-color: #1D3E60;
+	font-family: 'Danfo', serif ;
+}
+.danfo {
+  font-family: "Danfo", serif;
+  font-optical-sizing: auto;
+  font-weight: 350;
+  font-style: normal;
+  font-variation-settings:"ELSH" 0;
+}
+/*Cuerpo*/
+table{
+  width: 85%; /* Asegura que la tabla use todo el ancho disponible */
+  margin: auto; /* Centra la tabla horizontalmente */
+
+}
+td{
+	text-align: center;
+	color: grey;
+	align-items: center;
+	background-color: black;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+}
+td:hover{
+	text-align: center;
+	color: white;
+	background-color: black;
+	border-radius: 25px;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	transform: scale(1.2,1.2);
+	-moz-transform: scale(1.2,1.2);
+	-webkit-transform: scale(1.2,1.2);
 }
