@@ -1,0 +1,93 @@
+/*Navegador*/
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 20px 60px; /* Espaciado alrededor del contenido del header */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas múltiples */
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos de navegación se ajusten en líneas múltiples */
+    justify-content: center; /* Centra los elementos de navegación */
+    width: 100%; /* Asegura que la navegación ocupe todo el ancho disponible */
+}
+
+.nav-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Establece el color del texto */
+    padding: 10px 20px; /* Agrega espacio alrededor del texto */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+    flex-grow: 1; /* Permite que los enlaces crezcan para llenar el espacio */
+    text-align: center; /* Alinea el texto de los enlaces al centro */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+}
+
+.nav-link:hover {
+    background-color: #68c5b7; /* Nuevo color de fondo al pasar el mouse */
+    color: #fff; /* Nuevo color de texto al pasar el mouse */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeñas */
+    }
+}
+/**/
+body{
+    background-image: url('https://i.pinimg.com/564x/a5/09/3a/a5093a9c7bbc39a00ecaeb1cb6b64ded.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+/*titulo*/
+h1{
+    color: white;
+    text-align: center;
+    font-size: 100px;
+}
+/*cuerpo*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+/* efecto de hover */
+.fa:hover {
+  opacity: 0.7;
+}
+div{
+ background-color:rgba(255, 255, 255, 0.7) ;
+ padding: 90px;
+ font-size: 18px;
+ color: #333;
+
+}
+/* color específico para cada marca */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* YouTube*/
+.fa-youtube {
+  background: #FF0000;
+  color: white;
+}
+/* Instagram */
+.fa-instagram {
+  background: #FF4DA6;
+  color: white;
+}
+/* Pinterest*/
+.fa-pinterest {
+  background: #FF0000;
+  color: white;
+}
