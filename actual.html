@@ -9,26 +9,71 @@
 <body>
 <header>
 	<nav>
-		<a href="BigData.html" class="nav-link">Inicio</a>
-		<a href="Historia.html" class="nav-link">Historia</a>
-		<a href="objetivo.html" class="nav-link">Objetivo</a>
-		<a href="actual.html" class="nav-link">¿Qué se espera?</a>
-		<a href="futuro.html" class="nav-link">Visión a Futuro</a>
-		<a href="Imagenes.html" class="nav-link">Imagenes</a>
-		<a href="Videos.html" class="nav-link">Videos</a>
-		<a href="FormularioBigData.html" class="nav-link">Formulario</a>
+		<nav>
+        
+            <a href="BigData.html" class="nav-link">Inicio</a>
+            <a href="Historia.html" class="nav-link">Historia</a>
+            <a href="objetivo.html" class="nav-link">Objetivo</a>
+            <a href="impacto.html" class="nav-link">Impacto</a>
+            <a href="actual.html" class="nav-link">Situación</a>
+            <a href="futuro.html" class="nav-link">Visión a Futuro</a>
+            <a href="Imagenes.html" class="nav-link">Imagenes</a>
+            <a href="Videos.html" class="nav-link">Videos</a>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
+            <a href="Redes.html" class="nav-link">Redes</a>
+        
+    </nav>
 	</nav>
-</header>
-<h1>¿Qué se espera del área?</h1>
-<h3>Los usos más rentables se encuentran en la educación, la sanidad y el marketing</h3>
-<div class="caja1">
-		<p><strong> Educación </strong><br>El análisis de Big Data puede ayudar a evaluar el rendimiento de estudiantes y tutores o incluso a adaptar planes de estudios completos. Por ejemplo, puede ayudar a adaptar una lista de bibliografía obligatoria o reconocer cuándo los estudiantes están interesados en un curso concreto. <img src="https://th.bing.com/th/id/OIP.XC90rPvci4_aPztGQpW4JQHaEK?rs=1&pid=ImgDetMain", width="150" height="150">  </p>
-</div>
-<div class="caja2">
-		<p><strong>Sanidad</strong><br> <img src="https://th.bing.com/th/id/OIP.DRXzSR-0O0UCQqe3VyzRVgHaEK?rs=1&pid=ImgDetMain", width="150" height="150"><br>La mayor utilidad se encuentra en la predicción de la aparición de determinadas enfermedades, lo que significa que los profesionales médicos pueden responder con mayor rapidez y ralentizar o incluso evitar la propagación de la enfermedad.</p>
-</div>
-<div class="caja3">
-		<p><strong>Marketing</strong><br>El análisis de big data pone de relieve con mayor precisión el público objetivo de un producto, lo que con toda probabilidad aumentará la eficacia de una campaña determinada, aportando más beneficios a un coste menor. Es muy probable que el big data sustituya a los estudios de mercado en un futuro próximo.<br><img src="https://th.bing.com/th/id/OIP._41l0V2StrTM4qkLmGwyBwHaHO?rs=1&pid=ImgDetMain", width="150" height="150"> </p>
-</div>
+
+	<h1>Situación Actual <br>del <br>Big Data y Análisis de Datos</h1>
+        <nav>
+            <ul>
+                <li><a href="#adopcion">Adopción</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#desafios">Desafíos</a></li>
+                <li><a href="#futuro">Futuro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="adopcion">
+            <h2>Adopción del Big Data</h2>
+            <p>El Big Data ha sido adoptado ampliamente en diversos sectores, incluyendo la salud, las finanzas, el comercio y la manufactura. Empresas y gobiernos están utilizando grandes volúmenes de datos para mejorar la toma de decisiones, optimizar operaciones y desarrollar nuevos productos y servicios. Por ejemplo, en la salud, el Big Data se utiliza para el análisis predictivo y la personalización del tratamiento de pacientes.</p>
+        </section>
+        <section id="tecnologias">
+            <h2>Tecnologías de Big Data</h2>
+            <p>Las tecnologías de Big Data han avanzado significativamente en los últimos años. Herramientas como Hadoop, Spark, y las bases de datos NoSQL han permitido a las organizaciones procesar y analizar grandes cantidades de datos de manera más eficiente. Además, la inteligencia artificial (IA) y el aprendizaje automático (machine learning) se están integrando cada vez más en las soluciones de Big Data, proporcionando análisis más profundos y predictivos.</p>
+        </section>
+        <section id="desafios">
+            <h2>Desafíos en el Big Data</h2>
+            <p>A pesar de los avances, el Big Data enfrenta varios desafíos. La gestión de la privacidad y la seguridad de los datos es una preocupación principal, especialmente con la creciente cantidad de datos sensibles que se recopilan. Además, la calidad de los datos y la integración de diferentes fuentes de datos son retos significativos. Las organizaciones también enfrentan la falta de habilidades especializadas en análisis de datos, lo que limita su capacidad para aprovechar plenamente las oportunidades que ofrece el Big Data.</p>
+        </section>
+        <section id="futuro">
+            <h2>El Futuro del Big Data</h2>
+            <p>El futuro del Big Data es prometedor, con expectativas de que continúe creciendo e impactando diversas industrias. La evolución de la IA y el machine learning promete hacer que el análisis de datos sea aún más poderoso y accesible. Además, con el avance de la Internet de las Cosas (IoT), se espera un aumento exponencial en la cantidad de datos generados, lo que abrirá nuevas oportunidades y desafíos en el manejo y análisis de Big Data.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Situación Actual del Big Data. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav ul li a");
+            
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const sectionId = link.getAttribute("href").substring(1);
+                    const section = document.getElementById(sectionId);
+                    
+                    window.scrollTo({
+                        top: section.offsetTop - 60,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
