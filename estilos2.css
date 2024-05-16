@@ -1,38 +1,50 @@
+
+/*Navegador*/
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    padding: 20px 60px; /* Espaciado alrededor del contenido del header */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas múltiples */
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos de navegación se ajusten en líneas múltiples */
+    justify-content: center; /* Centra los elementos de navegación */
+    width: 100%; /* Asegura que la navegación ocupe todo el ancho disponible */
+}
+
+.nav-link {
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Establece el color del texto */
+    padding: 10px 20px; /* Agrega espacio alrededor del texto */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+    flex-grow: 1; /* Permite que los enlaces crezcan para llenar el espacio */
+    text-align: center; /* Alinea el texto de los enlaces al centro */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+}
+
+.nav-link:hover {
+    background-color: #68c5b7; /* Nuevo color de fondo al pasar el mouse */
+    color: #fff; /* Nuevo color de texto al pasar el mouse */
+}
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeñas */
+    }
+}
+/*Fondo*/
 body {
   background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
   background-size: cover; 
   background-repeat: no-repeat;
  background-attachment: fixed;
 }
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 60px;
-}
-nav a{
-	font-weight: 600;
-	padding-right: 100px;
-}
-.nav-link {
-  text-decoration: none; /* Elimina el subrayado */
-  color: white; /* Establece el color del texto */
-  padding: 10px 20px; /* Agrega espacio alrededor del texto */
-  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
-}
-.nav-link:hover {
-  background-color: #68c5b7; /* Nuevo color de fondo */
-  color: #fff; /* Nuevo color de texto */
-}
-nav ul {
-  list-style: none; 
-  display: flex; 
-  padding: 0;
-  margin: 0; 
-}
-nav ul li {
-  margin-right: 20px; 
-}
+/*Cuerpo*/
 @font-face{
 	font-family: "parrafos";
 	src: url("Nicolast.ttf") format("truetype");
@@ -47,6 +59,13 @@ nav ul li {
 	color: white;
 	font-family: 'parrafos';
 	font-size: 100px;
+	
+}
+.descripcion {
+    color: white; /* Color del texto */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente negro */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
 }
 #titulo{
 	text-align: center;
@@ -55,13 +74,11 @@ nav ul li {
 	color: white;
 	background-color: #2D4F8A;
 }
-#fon{
-	background-color: #2D4F8A
-}
+
 .caja3{
 	display: inline-block;
 	width: 500px;
-	height: 700px;
+	height: 500px;
 	background-color: #408DD9;
 	margin-bottom: 70px;
 	padding: 50px;
@@ -69,7 +86,7 @@ nav ul li {
 .caja4{
 	display: inline-block;
 	width: 500px;
-	height: 700px;
+	height: 500px;
 	background-color: #408DD9;
 	margin-bottom: 70px;
 	padding: 40px;
