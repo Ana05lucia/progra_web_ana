@@ -4,43 +4,164 @@ body{
   background-repeat: no-repeat;
  background-attachment: fixed;
 }
-header{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 60px;
+/*Navegador*/
+header {
+	background-color:  rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio entre los elementos */
+  align-items: center; /* Alinea los elementos verticalmente */
+  padding: 20px 60px; /* Espaciado alrededor del contenido del header */
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en líneas múltiples */
+  border-bottom: 1px solid #fff;
+  backdrop-filter: blur(10px);
+  position: sticky;
+ 	top: 0;
+	z-index: 1000;
 }
+
+nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos de navegación se ajusten en líneas múltiples */
+  justify-content: center; /* Centra los elementos de navegación */
+  width: 100%; /* Asegura que la navegación ocupe todo el ancho disponible */
+}
+
 .nav-link {
-  text-decoration: none; /* Elimina el subrayado */
-  color: white; /* Establece el color del texto */
-  padding: 10px 20px; /* Agrega espacio alrededor del texto */
-  transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+    text-decoration: none; /* Elimina el subrayado */
+    color: white; /* Establece el color del texto */
+    padding: 10px 20px; /* Agrega espacio alrededor del texto */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza los cambios de color */
+    flex-grow: 1; /* Permite que los enlaces crezcan para llenar el espacio */
+    text-align: center; /* Alinea el texto de los enlaces al centro */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
 }
+
 .nav-link:hover {
-  background-color: #1B4E7A; /* Nuevo color de fondo */
-  color: #fff; /* Nuevo color de texto */
+    background-color: #68c5b7; /* Nuevo color de fondo al pasar el mouse */
+    color: black; /* Nuevo color de texto al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+		transform: scale(1.1);
 }
-#his{
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeñas */
+    }
+}
+/*Titulos*/
+h1{
 	text-align: center;
-	font-size: 45px;
-	margin-top: 20 px;
 	color: white;
-	background-color: #804B1C;
+	background-color: rgba(196,98,16, 1.0);
 }
-#fon{
-	background-color: #804B1C
+/*Linea del tiempo*/
+/* Establece un modelo de caja */
+* {
+  box-sizing: border-box;
 }
-.caja5{
-	align: rigth;
-	width: 500px;
-	height: 500px;
-	background-color: #AB6426;
-	margin-bottom: 70px;
+
+/* Establece un color de fondo */
+body {
+  background-color: #474e5d; /* color de fondo gris oscuro */
+  font-family: Helvetica, sans-serif; /* tipo de letra Helvetica, sans-serif */
 }
-.caja6{
-	align: left fixed;
-	width: 500px;
-	height: 500px;
-	background-color: #AB6426;
-	margin-bottom: 70px;
+
+/* La línea de tiempo real (la regla vertical) */
+.timeline {
+  position: relative; /* posición relativa */
+  max-width: 1200px; /* ancho máximo de 1200px */
+  margin: 0 auto; /* margen automático para centrar */
 }
+
+/* La línea de tiempo real (la regla vertical) */
+.timeline::after {
+  content: ''; /* contenido vacío */
+  position: absolute; /* posición absoluta */
+  width: 6px; /* ancho de 6px */
+  background-color: white; /* color de fondo blanco */
+  top: 0; /* arriba del todo */
+  bottom: 0; /* abajo del todo */
+  left: 50%; /* a la izquierda al 50% */
+  margin-left: -3px; /* margen izquierdo de -3px para centrar */
+}
+
+/* Contenedor alrededor del contenido */
+.container {
+  padding: 10px 40px; /* relleno de 10px arriba/abajo y 40px izquierda/derecha */
+  position: relative; /* posición relativa */
+  background-color: inherit; /* color de fondo heredado */
+  width: 50%; /* ancho del 50% */
+}
+
+/* Los círculos en la línea de tiempo */
+.container::after {
+  content: ''; /* contenido vacío */
+  position: absolute; /* posición absoluta */
+  width: 25px; /* ancho de 25px */
+  height: 25px; /* altura de 25px */
+  right: -17px; /* a la derecha a -17px */
+  background-color: white; /* color de fondo blanco */
+  border: 4px solid #FF9F55; /* borde sólido de 4px y color naranja */
+  top: 15px; /* arriba a 15px */
+  border-radius: 50%; /* borde redondeado al 50% */
+  z-index: 1; /* índice z de 1 */
+}
+
+/* Coloca el contenedor a la izquierda */
+.left {
+  left: 0; /* a la izquierda del todo */
+}
+
+/* Coloca el contenedor a la derecha */
+.right {
+  left: 50%; /* a la izquierda al 50% */
+}
+
+/* Añade flechas al contenedor izquierdo (apuntando a la derecha) */
+.left::before {
+  content: " "; /* contenido vacío */
+  height: 0; /* altura de 0 */
+  position: absolute; /* posición absoluta */
+  top: 22px; /* arriba a 22px */
+  width: 0; /* ancho de 0 */
+  z-index: 1; /* índice z de 1 */
+  right: 30px; /* a la derecha a 30px */
+  border: medium solid white; /* borde sólido medio y blanco */
+  border-width: 10px 0 10px 10px; /* ancho del borde de 10px */
+  border-color: transparent transparent transparent white; /* color del borde transparente y blanco */
+}
+
+/* Añade flechas al contenedor derecho (apuntando a la izquierda) */
+.right::before {
+  content: " "; /* contenido vacío */
+  height: 0; /* altura de 0 */
+  position: absolute; /* posición absoluta */
+  top: 22px; /* arriba a 22px */
+  width: 0; /* ancho de 0 */
+  z-index: 1; /* índice z de 1 */
+  left: 30px; /* a la izquierda a 30px */
+  border: medium solid white; /* borde sólido medio y blanco */
+  border-width: 10px 10px 10px 0; /* ancho del borde de 10px */
+  border-color: transparent white transparent transparent; /* color del borde transparente y blanco */
+}
+
+/* Corrige el círculo para los contenedores del lado derecho */
+.right::after {
+  left: -16px; /* a la izquierda a -16px */
+}
+
+/* El contenido real */
+.content {
+  padding: 20px 30px; /* relleno de 20px arriba/abajo y 30px izquierda/derecha */
+  background-color: white; /* color de fondo blanco */
+  position: relative; /* posición relativa */
+  border-radius: 6px; /* borde redondeado de 6px */
+}
+
+/* menos de 600px de ancho */
+@media screen and (max-width: 600px) {
+  /* Coloca la línea de tiempo a la izquierda */
+  .timeline::after {
+    left: 31px; /* a la izquierda a 31px */
+  }
