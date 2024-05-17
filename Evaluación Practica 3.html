@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="practica3.css">
+    <title>Palíndromo</title>
+    <script type="text/javascript">
+    // Verifica si la cadena es un palíndromo y muestra el resultado
+        function verificarPalindromo() {
+            var cadena = document.getElementById('cadena').value;
+            var resultado = document.getElementById('resultado');
+            resultado.textContent = palindromo(cadena);
+        }
+
+    // Función que determina si una cadena es un palíndromo
+        function palindromo(cadena) {
+            var resultado = "La frase \""+cadena+"\"";
+            var cadenaOriginal = cadena.toLowerCase().replace(/[\W_]/g, '');
+            var cadenaReves = cadenaOriginal.split('').reverse().join('');
+            if(cadenaOriginal === cadenaReves) {
+                resultado += " es un palíndromo";
+            } else {
+                resultado += " no es un palíndromo";
+            }
+            return resultado;
+        }
+    </script>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>¿Es un palíndromo?</h1>
+        <input type="text" id="cadena" placeholder="Introduce una frase">
+        <button onclick="verificarPalindromo()">Verificar</button>
+        <p id="resultado"></p>
+    </div>
+
+   
+</body>
+</html>
