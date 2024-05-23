@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:#42240C;
+
+        }
+        header {
+            background:black;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: white;
+            background-color: #42240C
+
+        }
+        .timeline {
+            background-image: url('https://thumbs.dreamstime.com/b/fondo-antiguo-de-la-aventura-del-vintage-ciencia-educaci-n-viaje-equipo-historia-y-geograf-estilo-retro-148443647.jpg');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+            margin: 20px auto;
+            padding: 20px 0;
+            width: 90%;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #ddd;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container {
+            padding: 20px 30px;
+            position: relative;
+            width: 50%;
+            background: #68584B;
+        }
+        .container.left {
+            left: 0;
+        }
+        .container.right {
+            left: 50%;
+        }
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .container.left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: -15px;
+            border: medium solid #ddd;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent #ddd;
+        }
+        .container.right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: -15px;
+            border: medium solid #ddd;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #ddd transparent transparent;
+        }
+        .content {
+            padding: 20px 30px;
+            background: white;
+            position: relative;
+            border-radius: 6px;
+        }
+        .container.left .content {
+            margin-left: 90px;
+        }
+        .container.right .content {
+            margin-right: 90px;
+        }
+        .content h2 {
+            margin: 0 0 10px;
+            font-size: 1.25em;
+        }
+        .content p {
+            margin: 0;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .container.right {
+                left: 0%;
+            }
+            .container.left::before, .container.right::before {
+                left: 60px;
+                border: medium solid #ddd;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #ddd transparent transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href=".html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
+    </nav>
+</header>
+<h1>Big Data</h1>
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <h2>1960 y 1970</h2>
+            <p>Orígenes de los grandes conjuntos de datos.<br>Creación de los primeros centros de datos.<br>Desarrollo de las bases de datos relacionales.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2005</h2>
+            <p>Aumento notable de datos generados por usuarios en plataformas como Facebook y YouTube.<br>
+            Desarrollo de Hadoop, un marco de código abierto para almacenar y analizar grandes conjuntos de datos.<br>
+            Popularización de NoSQL para manejar variedad y volumen en los datos.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>Posterior al 2005</h2>
+            <p>Desarrollo de Apache Spark, otro marco de código abierto que facilita el procesamiento de big data.<br>Estos marcos hacen el big data más accesible y económico.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2007: Era del Cloud Computing</h2>
+            <p>La utilidad del big data se expande con la computación en la nube.<br>Ofrece escalabilidad elástica y bases de datos de gráficos para análisis más rápidos e integrales.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>2009</h2>
+            <p>Con la llegada del Internet de las Cosas (IoT) <br>Aumento de datos generados por dispositivos conectados.<br>Los datos sobre patrones de uso y rendimiento se vuelven más valiosos.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2010s</h2>
+            <p>Explosión de datos con la proliferación de dispositivos móviles y sensores.<br>Avances en analítica predictiva y minería de datos.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>2020s</h2>
+            <p>Integración de inteligencia artificial y big data para automatización y toma de decisiones en tiempo real.<br>Crecimiento en la adopción de plataformas de datos como servicio (DaaS).</p>
+        </div>
+    </div>
+</div>
+<h1>Análisis de Datos</h1>
+<div class="timeline">
+    <div class="container left">
+        <div class="content">
+            <h2>1962</h2>
+            <p>John W. Tukey conceptualiza la evolución de la estadística matemática hacia la ciencia de datos.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>1970</h2>
+            <p>Introducción de SQL, un lenguaje de consulta estructurado que transformó la gestión de bases de datos y el análisis de datos.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>1974</h2>
+            <p>Peter Naur acuña el término "Ciencia de Datos".</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>1976</h2>
+            <p>Desarrollo de ‘S’ por investigadores de Bell Labs, un conjunto de bibliotecas de macros Fortran para análisis estadístico interno. Posteriormente, se reescribió en código C y se convirtió en la base de R.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>1977</h2>
+            <p>Se establece la Asociación Internacional de Computación Estadística (IASC) para convertir datos en información y conocimiento.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>1980s</h2>
+            <p>Comienza la utilización de métodos de minería de datos.</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>Décadas siguientes</h2>
+            <p>Evolución del análisis de datos desde subrutinas en Fortran hasta lenguajes como Python, R, y Julia, facilitando el procesamiento y modelado estadístico, así como el manejo de grandes volúmenes de datos.</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>Actualidad</h2>
+            <p>El análisis de datos es esencial en la ciencia de datos, la inteligencia empresarial y otras disciplinas, siendo una herramienta clave para la toma de decisiones informadas y la extracción de conocimiento de los datos.</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('scroll', function() {
+        var elements = document.querySelectorAll('.container');
+        var windowHeight = window.innerHeight;
+        elements.forEach(function(element) {
+            var positionFromTop = element.getBoundingClientRect().top;
+            if (positionFromTop - windowHeight <= 0) {
+                element.classList.add('slide-in');
+            }
+        });
+    });
+</script>
+</body>
+</html>

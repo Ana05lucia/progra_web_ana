@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situación Actual del Big Data y Análisis de Datos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(to right, #4caf50, #8bc34a);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 { 
+            text-align: center;
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+@font-face{
+    font-family: "parrafos";
+    src: url("Nicolast.ttf") format("truetype");
+}
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            color: #4caf50;
+            font-size: 1.8rem;
+        }
+
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            nav ul li a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+       <a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href=".html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
+    </nav>
+    </header>
+        <h1>Situación Actual del Big Data y Análisis de Datos</h1>
+    <main>
+        <section id="adopcion">
+            <h2>Adopción del Big Data</h2>
+            <p>El Big Data ha sido adoptado ampliamente en diversos sectores, incluyendo la salud, las finanzas, el comercio y la manufactura. Empresas y gobiernos están utilizando grandes volúmenes de datos para mejorar la toma de decisiones, optimizar operaciones y desarrollar nuevos productos y servicios. Por ejemplo, en la salud, el Big Data se utiliza para el análisis predictivo y la personalización del tratamiento de pacientes.</p>
+        </section>
+        <section id="tecnologias">
+            <h2>Tecnologías de Big Data</h2>
+            <p>Las tecnologías de Big Data han avanzado significativamente en los últimos años. Herramientas como Hadoop, Spark, y las bases de datos NoSQL han permitido a las organizaciones procesar y analizar grandes cantidades de datos de manera más eficiente. Además, la inteligencia artificial (IA) y el aprendizaje automático (machine learning) se están integrando cada vez más en las soluciones de Big Data, proporcionando análisis más profundos y predictivos.</p>
+        </section>
+        <section id="desafios">
+            <h2>Desafíos en el Big Data</h2>
+            <p>A pesar de los avances, el Big Data enfrenta varios desafíos. La gestión de la privacidad y la seguridad de los datos es una preocupación principal, especialmente con la creciente cantidad de datos sensibles que se recopilan. Además, la calidad de los datos y la integración de diferentes fuentes de datos son retos significativos. Las organizaciones también enfrentan la falta de habilidades especializadas en análisis de datos, lo que limita su capacidad para aprovechar plenamente las oportunidades que ofrece el Big Data.</p>
+        </section>
+        <section id="futuro">
+            <h2>El Futuro del Big Data</h2>
+            <p>El futuro del Big Data es prometedor, con expectativas de que continúe creciendo e impactando diversas industrias. La evolución de la IA y el machine learning promete hacer que el análisis de datos sea aún más poderoso y accesible. Además, con el avance de la Internet de las Cosas (IoT), se espera un aumento exponencial en la cantidad de datos generados, lo que abrirá nuevas oportunidades y desafíos en el manejo y análisis de Big Data.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Situación Actual del Big Data. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll("nav ul li a");
+            
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    const sectionId = link.getAttribute("href").substring(1);
+                    const section = document.getElementById(sectionId);
+                    
+                    window.scrollTo({
+                        top: section.offsetTop - 60,
+                        behavior: "smooth"
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Visión a Futuro</title>
+	<style>
+		body {
+			background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			color: #f0f0f0;
+			font-family: 'Montserrat', sans-serif;
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+		}
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 60px;
+			background: rgba(0, 0, 0, 0.7);
+			backdrop-filter: blur(10px);
+			border-bottom: 1px solid #fff;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+		}
+		header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+		h1 {
+			text-align: center;
+			color: #fff;
+			font-size: 2em;
+			margin-top: 20px;
+		}
+		#content {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: justify;
+			padding: 20px;
+		}
+		.column {
+			background: linear-gradient(135deg, rgba(102, 145, 212, 0.8), rgba(80, 125, 190, 0.8));
+			color: #fff;
+			border-radius: 15px;
+			padding: 20px;
+			margin: 10px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			width: calc(33% - 40px);
+			box-sizing: border-box;
+			transition: transform 0.3s ease, background 0.3s ease;
+		}
+		.column:hover {
+			transform: scale(1.05);
+			background: linear-gradient(135deg, rgba(80, 125, 190, 0.9), rgba(102, 145, 212, 0.9));
+		}
+		.column h1 {
+			font-size: 1.2em;
+			margin: 0;
+		}
+		@media (max-width: 768px) {
+			.header {
+				flex-direction: column;
+				padding: 10px 30px;
+			}
+			.nav-link {
+				margin: 5px 0;
+			}
+			.column {
+				width: calc(100% - 40px);
+				margin: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="BD.html" class="nav-link">Inicio</a>
+            <a href="history.html" class="nav-link">Historia</a>
+            <a href="OB.html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto.html">Impacto</a>
+                    <a href="situacion.html">Situación Actual</a>
+                    <a href="vision.html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="Imagenes.html">Imágenes</a>
+                    <a href="Videos.html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href=".html">Contactanos</a>
+                  <a href="Redes.html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog.html" class="nav-link">Blog</a>
+            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
+		</nav>
+	</header>
+	<h1>Visión a Futuro</h1>
+	<div id="content">
+		<div class="column">
+			<h1>1. El volumen de datos no hará si aumentan<br>Los expertos en big data afirman que el volumen de datos producidos crecerá exponencialmente. Según el informe Data Age 2025 de IDC, para el año 2025, la cantidad de datos podría alcanzar los 175 zettabytes. Eso es 40 veces más que el volumen de datos de 2013.</h1>
+		</div>
+		<div class="column">
+			<h1>2. El aprendizaje automático seguirá desarrollándose<br>Como dijo Wei Li, Vicepresidente y Director General de Intel, cada año el aprendizaje automático se vuelve más y más sofisticado. Lo utilizamos en coches autoconducidos, dispositivos de detección de fraudes y big data, y el número de formas en que lo utilizamos no hará más que crecer. Esto se debe a que el aprendizaje automático depende de la cantidad de datos de entrada, de modo que a medida que aumenta la cantidad de datos, también lo hace la precisión de los resultados del aprendizaje automático.<br>Además, durante mucho tiempo el aprendizaje automático no estuvo al alcance de la mayoría de las empresas porque las plataformas de código abierto dominaban este ámbito. Esto significa que las empresas que querían implementar el aprendizaje automático en sus procesos tenían que configurar las soluciones por su cuenta, y la mayoría de ellas adolecían de falta de conocimientos en este ámbito. Pero todo cambió cuando los proveedores comerciales empezaron a crear sus propias soluciones asequibles que no requieren demasiada configuración. Las aplicaciones y plataformas de aprendizaje automático han reunido 28.500 y 14.400 millones de dólares estadounidenses respectivamente en financiación hasta marzo de 2019, y estas cifras aumentan a medida que lo hace la demanda.
+			</h1>
+		</div>
+		<div class="column">
+			<h1>3. Los expertos en big data estarán muy solicitados<br>Puestos como el de director de datos y científico de datos son relativamente nuevos y sólo existen realmente desde la implantación masiva de machine learning y big data.<br>Un buen responsable o científico de datos también es valioso por su base de conocimientos. Tienen que estar familiarizados con una amplia gama de temas, como lenguajes de programación, algoritmos de aprendizaje automático, técnicas de manipulación de datos y plataformas y herramientas de datos. Los especialistas tienen que conocer las últimas tendencias y cómo utilizarlas para resolver tareas concretas, lo que requiere tiempo y experiencia. Aunque estos dos factores implican que los especialistas pueden ser caros, potencialmente pueden aportar importantes beneficios a su empresa, por lo que empezar a buscar un especialista ahora puede ser una buena idea.
+			</h1>
+		</div>
+		<div class="column">
+			<h1>4. El uso de datos rápidos y procesables aumentará rápidamente<br>La competencia entre empresas significa que tienen que tomar decisiones que cambien el juego antes incluso de que otros competidores vean la oportunidad. Big data facilita la búsqueda de estos cambios y la actuación en consecuencia.<br>Si hablamos de análisis de datos, incluso cuando se trata de aprendizaje automático, solemos referirnos al análisis en modo batch (cuando recopilamos lotes de datos, se los damos a un algoritmo y éste nos da información valiosa sobre la salida). Pero esto no significa que podamos tomar una decisión en el momento en que obtenemos los datos; se necesita tiempo para hacer un análisis final.<br>Los datos rápidos permiten procesarlos en tiempo real, tal y como aparecen en nuestras bases de datos. Eso significa que podemos analizar los cambios en los flujos de datos sobre la marcha y responder a ellos rápidamente. Es un auténtico cambio de juego.<br>Los datos procesables son el resultado del análisis de big data. Cuando se obtiene un gran número de datos de diversos tipos, apenas se puede hacer nada con ellos. Pero tras procesarlos con herramientas de análisis de big data, podemos obtener información que nos ayudará a tomar decisiones informadas y racionales.<br>Según algunos expertos, en el futuro los big data podrían incluso ser sustituidos por datos rápidos y datos procesables.
+			</h1>
+		</div>
+		<div class="column">
+			<h1>5. Más empresas intentarán monetizar sus datos<br>Los datos se recogen en todas partes, desde tiendas de comestibles hasta sitios web y aplicaciones, y todos estos datos pueden venderse a otras empresas como otra fuente de ingresos. La demanda de este tipo de datos es alta y no parece que vaya a disminuir.
+			</h1>
+		</div>
+		<div class="column">
+			<h1>6. Más herramientas de data analysis ya no requerirán un analista<br>La demanda de data analysis es alta, pero como ya hemos dicho, faltan profesionales en este campo. Es muy posible que los
