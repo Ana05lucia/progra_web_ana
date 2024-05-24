@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Objetivo</title>
-	<link rel="stylesheet" type="text/css" href="objetivos.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -26,6 +25,7 @@
 			color: white;
 			padding: 10px 0;
 		}
+		/*Navegador*/
 		nav {
 			display: flex;
 			justify-content: center;
@@ -72,6 +72,7 @@
 			background-color: #575757;
 			border-radius: 5px;
 		}
+		/*Espectos de la tabla efectos más*/
 		h1 {
 			text-align: center;
 			margin-top: 20px;
@@ -111,43 +112,45 @@
 		}
 		/* Additional styles for carousel */
 		.carousel-inner img {
-			width: 100%;
-			height: 500px;
-			object-fit: cover;
+			position: relative;
+			  max-width: 800px;/*Limita el ancho maximo a 600px*/
+			  margin: auto;/*Centra horizontalmente */
+			  overflow: hidden;/*Oculta el exeso de la imagen*/
 		}
+
 	</style>
 </head>
 <body>
 <header>
 	<nav>
-		<a href="BD.html" class="nav-link">Inicio</a>
-            <a href="history.html" class="nav-link">Historia</a>
-            <a href="OB.html" class="nav-link">Objetivo</a>
+            <a href="BD (2).html" class="nav-link">Inicio</a>
+            <a href="history (1).html" class="nav-link">Historia</a>
+            <a href="OB (1).html" class="nav-link">Objetivo</a>
             <div class="dropdown">
                 <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
-                    <a href="impacto.html">Impacto</a>
-                    <a href="situacion.html">Situación Actual</a>
-                    <a href="vision.html">Visión a Futuro</a>
+                    <a href="impacto (1).html">Impacto</a>
+                    <a href="situacion (1).html">Situación Actual</a>
+                    <a href="vision (1).html">Visión a Futuro</a>
                 </div>
             </div>
             <div class="dropdown">
                 <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
                 <div class="dropdown-content">
-                    <a href="Imagenes.html">Imágenes</a>
-                    <a href="Videos.html">Videos</a>
+                    <a href="imagenes (1).html">Imágenes</a>
+                    <a href="Videos (1).html">Videos</a>
                 </div>
             </div>
              <div class="dropdown">
                 <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
                 <div class="dropdown-content">
-                  <a href=".html">Contactanos</a>
-                  <a href="Redes.html">Redes</a>
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes (1).html">Redes</a>
                 </div>
             </div>
-            <a href="Blog.html" class="nav-link">Blog</a>
-            <a href="FormularioBigData.html" class="nav-link">Cuestionario</a>
-	</nav>
+            <a href="Blog (1).html" class="nav-link">Blog</a>
+            <a href="FormularioBigData (1).html" class="nav-link">Cuestionario</a>
+        </nav>
 </header>
 <h1>Objetivos</h1>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -158,13 +161,13 @@
 	</ol>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="OB1.cur" class="d-block w-100" alt="...">
+			<img src="https://th.bing.com/th/id/R.996bb2a05b25067948ad14ffbff34c30?rik=yYifAgik3%2baNsw&pid=ImgRaw&r=0" class="d-block w-100" alt="...">
 		</div>
 		<div class="carousel-item">
-			<img src="OB2.bmp" class="d-block w-100" alt="...">
+			<img src="https://th.bing.com/th/id/OIP.0dOQSriBnxc22Q_ONEGB1AAAAA?rs=1&pid=ImgDetMain" class="d-block w-100" alt="...">
 		</div>
 		<div class="carousel-item">
-			<img src="OB3.bmp" class="d-block w-100" alt="...">
+			<img src="https://th.bing.com/th/id/OIP.2Il7yICpZ85MKWjR9UFXGwHaEK?rs=1&pid=ImgDetMain" class="d-block w-100" alt="...">
 		</div>
 	</div>
 	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -194,4 +197,3 @@
 </table>
 </body>
 </html>
-
