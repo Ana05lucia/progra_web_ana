@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Videos</title>
+	<style >
+		/*Barra de Nav*/
+		body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:#42240C;
+            background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+  			background-size: cover; 
+ 			background-repeat: no-repeat;
+			background-attachment: fixed;
+        }
+        header {
+            background:black;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /*Otros*/
+        @media (max-width: 768px) {
+		    .nav-link {
+		        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeñas */
+		    }
+		}
+        h1{
+			color: white;
+			font-size: 40px;
+			text-align: center;
+		}
+		/*Para acomodar las imagenes en la tabla y tambien sus efectos*/
+		table{
+			margin: 0 auto;
+			width: 100%; 
+		}
+		video{
+			width: 250px;
+			height: 250px;
+			
+		}
+		td{
+			align-items: center;
+			background-color: black;
+			border: 5px solid white;
+			border-radius: 25px;
+			-moz-border-radius: 25px;
+			-webkit-border-radius: 25px;
+		}
+		td:hover{
+			background-color: black;
+			border: 5px solid white;
+			border-radius: 25px;
+			-moz-border-radius: 25px;
+			-webkit-border-radius: 25px;
+			transform: scale(1.5,1.5);
+			-moz-transform: scale(1.5,1.5);
+			-webkit-transform: scale(1.5,1.5);
+		}
+		@media (max-width: 768px) {
+		    /* Ajustes para pantallas de hasta 768px de ancho */
+		    table {
+		        width: 100%; 
+		    }
+		    td {
+		        width: 50%; /* Cada celda de la tabla ocupará el 50% del ancho de la tabla */
+		        box-sizing: border-box; /* Esto asegura que el padding y border estén incluidos en el ancho total */
+		    }
+		    video, iframe {
+		        width: 100%; /* Los videos e iframes ocuparán todo el ancho de su contenedor (td) */
+		        height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+		    }
+		}
+
+	</style>
+</head>
+<body>
+<header>
+	<nav>
+            <a href="BD (2).html" class="nav-link">Inicio</a>
+            <a href="history (1).html" class="nav-link">Historia</a>
+            <a href="OB (1).html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto (1).html">Impacto</a>
+                    <a href="situacion (1).html">Situación Actual</a>
+                    <a href="vision (1).html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="imagenes (1).html">Imágenes</a>
+                    <a href="Videos (1).html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes (1).html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog (1).html" class="nav-link">Blog</a>
+            <a href="FormularioBigData (1).html" class="nav-link">Cuestionario</a>
+        </nav>
+</header>
+<h1>Videos</h1>
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/eXMaoSEYrso" frameborder="0" allowfullscreen ></iframe>
+		
+			</td>
+			<td>
+				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/M26iIqmqWkI" frameborder="0" allowfullscreen ></iframe>
+			</td>
+			<td>
+				<video autoplay muted><source src="Que es 3.mp4" type="video/mp4"></video>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				 <iframe width="100%" height="auto" src="https://www.youtube.com/embed/w4vsFKMO7XA" frameborder="0" allowfullscreen ></iframe>
+			</td>
+			<td>
+				 <iframe width="100%" height="auto" src="https://www.youtube.com/embed/BOI4hiP93fQ" frameborder="0" allowfullscreen ></iframe>
+			</td>
+			<td>
+				 <iframe width="100%" height="auto" src="https://www.youtube.com/embed/AtdWWu3kDaQ" frameborder="0" allowfullscreen ></iframe>
+			</td>
+		</tr>
+	</tbody>
+	<!--<tbody>
+		<tr>
+			<td>
+				<iframe width="100%" height="auto" src="https://www.youtube.com/embed/eXMaoSEYrso" frameborder="0" allowfullscreen></iframe>
+				<video autoplay muted><source src="Que es 1.mp4" type="video/mp4"></video>
+			</td>
+			<td>
+				<video autoplay muted><source src="Que es 2.mp4" type="video/mp4"></video>
+			</td>
+			<td>
+				<video autoplay muted><source src="Que es 3.mp4" type="video/mp4"></video>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<video autoplay muted><source src="Que es 4.mp4" type="video/mp4"></video>
+			</td>
+			<td>
+				<video autoplay muted><source src="Que es 5.mp4" type="video/mp4"></video>
+			</td>
+			<td>
+				<video autoplay muted><source src="Que es 6.mp4" type="video/mp4"></video>
+			</td>
+		</tr>
+	</tbody>-->
+</table>
+</body>
+</html>

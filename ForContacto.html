@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+       body {
+            background-image: url('https://th.bing.com/th/id/R.e94f85c22243dca8c449be055c83011c?rik=9A7uG91GukfCnQ&pid=ImgRaw&r=0');
+            background-size: cover; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-color: #2c3e50; /* Color de respaldo */
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            }
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: white;
+        }
+    header {
+            background: 141660;
+            color: white;
+            padding: 1em 0;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+         h1 {
+            color: white;
+            text-align: center;
+            margin: 0.5em 0;
+        }
+
+
+    form {
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 20px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="email"], textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        color: #333333;
+    }
+
+    button[type="submit"] {
+        background-color: #007BFF;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="BD (2).html" class="nav-link">Inicio</a>
+            <a href="history (1).html" class="nav-link">Historia</a>
+            <a href="OB (1).html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto (1).html">Impacto</a>
+                    <a href="situacion (1).html">Situación Actual</a>
+                    <a href="vision (1).html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="imagenes (1).html">Imágenes</a>
+                    <a href="Videos (1).html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes (1).html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog (1).html" class="nav-link">Blog</a>
+            <a href="FormularioBigData (1).html" class="nav-link">Cuestionario</a>
+        </nav>
+    </header>
+    <br>
+    <form
+        action="https://formspree.io/f/xjvndodg"
+        method="POST"
+    >
+      <label>
+        Tu email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Tu mensaje:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>

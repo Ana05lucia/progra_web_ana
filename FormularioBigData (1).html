@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Obtener totales del formulario</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+	<!-- siempre para convertir a pdf copiar todos-->
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+	<style >
+		body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /*background:#42240C;*/
+			background-image: url("https://th.bing.com/th/id/R.d71ffe92e329bee086b2d2e87efaf2be?rik=3DrWfEfCi2bm9A&pid=ImgRaw&r=0");
+			background-size: cover;
+			background-attachment: fixed;
+        }
+        header {
+            background:black;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Ajustes para pantallas mÃ¡s pequeÃ±as */
+		@media (max-width: 768px) {
+		    .nav-link {
+		        padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeÃ±as */
+		    }
+		}
+		/*Fondo*/
+		
+		h1,h2{
+			text-align: center;
+		}
+		div{
+		 background-color:rgba(255, 255, 255, 0.7) ;
+		 padding: 20px;
+		 font-size: 18px;
+		 color: #333;
+		}
+	</style>
+</head>
+<script>
+var total;
+function califica()
+    {var total=0;
+    	//Evalua cada pregunta
+    	for (var x=1;x<=10;x++)
+    	{
+        var res=0;
+        var nom="r"+x;
+        var resul=document.getElementsByName(nom);
+        for(var i=0;i<resul.length;i++)
+        {
+            if(resul[i].checked==true)
+                res=parseInt(resul[i].value);
+        }
+        total=total+res;
+        document.getElementById("total").innerHTML="Puntos obtenidos: "+total+" Puntos";
+        }
+        if(total==50)
+        	document.getElementById("comentario").innerHTML="EXCELENTE!!!";
+        else
+        	if(total==25)
+        	document.getElementById("comentario").innerHTML="Regular!!,podrias mejorar más";
+        else
+        	if(total<=12)
+        	document.getElementById("comentario").innerHTML="Estudia un poco más";
+    }
+
+ 
+function generar(){
+
+//Crear un objeto o instancia jsPDF
+var doc = new jsPDF();
+
+//Definir el tamaño de la letra
+doc.setFontSize(55);
+//Color del texto
+doc.setTextColor(93,138,168);
+doc.text(40, 20, "Calificación");
+doc.setTextColor(250,84,81); //Color en formato RGB
+doc.setFontSize(20);
+doc.text(50, 35, "En base a lo que se respondio"); //Ubicación, Texto
+doc.setTextColor(0,0,0);
+doc.setFontSize(10);
+doc.text(20, 50, "50 puntos. Muy bien. \r Todas tus respuestas son correctas");
+doc.text(20, 70, "25 puntos. Regular. \r La mitad del cuestionario esta correto ");
+doc.text(20, 90, "12 puntos. \r Un cuarto de tus respuestas son correctas, intenta de nuevo");
+
+//doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+var string = doc.output('datauristring');
+
+$('iframe').attr('src', string);
+
+}
+</script>
+
+<body>
+<header>
+	<nav>
+            <a href="BD (2).html" class="nav-link">Inicio</a>
+            <a href="history (1).html" class="nav-link">Historia</a>
+            <a href="OB (1).html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto (1).html">Impacto</a>
+                    <a href="situacion (1).html">Situación Actual</a>
+                    <a href="vision (1).html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="imagenes (1).html">Imágenes</a>
+                    <a href="Videos (1).html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes (1).html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog (1).html" class="nav-link">Blog</a>
+            <a href="FormularioBigData (1).html" class="nav-link">Cuestionario</a>
+        </nav>
+</header>
+    <div id="contiene">
+	<h1>Responde la encuesta sobre Big Data y Analisis de Datos</h1>
+	<h2>Pon aprueba tú conocimiento</h2>
+<div >
+	<form>
+	<ul>
+
+		<li>¿Cuál de las siguientes afirmaciones describe mejor el Big Data?</li>
+		<input type="radio" name="r1" id="r1" value="0"/>Conjuntos de datos pequeños y estructurados.<br/>
+		<input type="radio" name="r1" id="r1" value="5"/>Datos complejos y en gran cantidad.<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Datos procesados únicamente por algoritmos.<br/>
+		<input type="radio" name="r1" id="r1" value="0"/>Datos utilizados exclusivamente para investigación científica.<br/>
+<br/>	
+		<li>¿Qué es el Análisis de Datos?</li>
+		<input type="radio" name="r2" id="r2" value="5"/>El proceso de extracción de información relevante de los datos.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>La gestión de grandes conjuntos de datos.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/>La investigación basada en datos.<br/>
+		<input type="radio" name="r2" id="r2" value="0"/> El almacenamiento de datos no estructurados.<br/>
+<br/>
+		<li>¿Cuál de las siguientes disciplinas se enfoca en la mejora de resultados económicos o financieros en las empresas?</li>
+		<input type="radio" name="r3" id="r3" value="0"/>Big Data.<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Data Science.<br/>
+		<input type="radio" name="r3" id="r3" value="5"/>Análisis de Datos.<br/>
+		<input type="radio" name="r3" id="r3" value="0"/>Todas las anteriores.<br/>
+<br/>
+        <li>¿Qué tipo de datos se manejan comúnmente en el Big Data?</li>
+		<input type="radio" name="r4" id="r4" value="0"/>Datos estructurados.<br/>
+		<input type="radio" name="r4" id="r4" value="5"/>Datos no estructurados.<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Datos procesados.<br/>
+		<input type="radio" name="r4" id="r4" value="0"/>Datos históricos.<br/>
+<br/>
+		<li>¿Cuál de las siguientes afirmaciones es cierta sobre Data Science?</li>
+		<input type="radio" name="r5" id="r5" value="5">Se enfoca en la investigación científica.<br/>
+		<input type="radio" name="r5" id="r5" value="0">Busca mejorar la eficiencia operativa en las empresas<br/>
+		<input type="radio" name="r5" id="r5" value="0">Utiliza exclusivamente datos estructurados.<br/>
+		<input type="radio" name="r5" id="r5" value="0">No está relacionada con el análisis de datos.<br/>
+<br/>
+		<li>¿¿Cuál de las siguientes áreas suele ser el ámbito de aplicación principal del Big Data?
+		</li>
+		<input type="radio" name="r6" id="r6" value="0"> Sector público.<br/>
+		<input type="radio" name="r6" id="r6" value="5">Empresa privada.<br/>
+		<input type="radio" name="r6" id="r6" value="0">Investigación académica<br/>
+		<input type="radio" name="r6" id="r6" value="0">Sergio<br/>
+<br/>
+		<li>¿Qué se entiende por datos no estructurados en el contexto del Big Data?</li>
+		<input type="radio" name="r7" id="r7" value="0">Datos organizados en tablas y relaciones.<br/>
+		<input type="radio" name="r7" id="r7" value="0">Datos almacenados en bases de datos.<br/>
+		<input type="radio" name="r7" id="r7" value="5">Datos que no siguen un formato específico<br/>
+		<input type="radio" name="r7" id="r7" value="0">Datos procesados por algoritmos de aprendizaje automático.<br/>
+<br/>
+		<li>¿Cuál de las siguientes disciplinas se centra en la extracción de conocimiento útil de los datos?</li>
+		<input type="radio" name="r8" id="r8" value="0">Big Data.<br/>
+		<input type="radio" name="r8" id="r8" value="0"> Data Science.<br/>
+		<input type="radio" name="r8" id="r8" value="5">Análisis de Datos.<br/>
+		<input type="radio" name="r8" id="r8" value="0">Todas las anteriores.<br/>
+<br/>
+		<li>¿Qué herramientas se utilizan comúnmente para trabajar con Big Data?</li>
+		<input type="radio" name="r9" id="r9" value="0">Hojas de cálculo.<br/>
+		<input type="radio" name="r9" id="r9" value="0"> Bases de datos relacionales<br/>
+		<input type="radio" name="r9" id="r9" value="0">Algoritmos de procesamiento de imágenes.<br/>
+		<input type="radio" name="r9" id="r9" value="5">Plataformas de procesamiento distribuido como Hadoop.<br/>
+<br/>
+		<li>¿Por qué es importante el Big Data en las organizaciones?</li>
+		<input type="radio" name="r10" id="r10" value="0">Porque permite almacenar datos históricos.<br/>
+		<input type="radio" name="r10" id="r10" value="0">Porque facilita la investigación científica.<br/>
+		<input type="radio" name="r10" id="r10" value="5">Porque ayuda a tomar decisiones basadas en datos.<br/>
+		<input type="radio" name="r10" id="r10" value="0">Porque solo se aplica en empresas tecnológicas.<br/>
+	</ul>
+</form>
+</div>
+<input type="button" value="Calificar" onclick="califica()">
+<p></p>
+<p id="total">   </p>
+<p id="comentario">   </p>
+<input type="button" onclick="generar()" value="Ver resultados"/> <br/>
+<iframe frameborder="0" width="600" height="500"></iframe>
+</div>
+</body>
+</html>

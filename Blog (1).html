@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Apuntes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+	<style >
+		body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background:#42240C;
+
+        }
+        header {
+            background:black;
+            color: #fff;
+            padding: 10px 0;
+        }
+        header nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+        }
+
+        .nav-link:hover {
+            background: #575757;
+            border-radius: 5px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+		/* Ajustes para pantallas mÃ¡s pequeñas */
+		@media (max-width: 768px) {
+	    	.nav-link {
+	        	padding: 10px 10px; /* Reduce el espacio alrededor del texto para pantallas pequeÃ±as */
+	    	}
+		}
+		/*Fondo*/
+		body{
+		    background-image: url("https://th.bing.com/th/id/R.d71ffe92e329bee086b2d2e87efaf2be?rik=3DrWfEfCi2bm9A&pid=ImgRaw&r=0");
+		    background-size: cover;
+		    background-attachment: fixed;
+
+		}
+		/*Fuente*/
+		.poetsen-one-regular {
+		  font-family: "Poetsen One", sans-serif;
+		  font-weight: 400;
+		  font-style: normal;
+		}
+
+		/* Estilos para la caja del formulario */
+		#cajaformulario {
+		    display: flex;
+		    float: left;
+		    padding: 20px;
+		    border: 1px solid #999999;
+		    background-color:rgba(255, 255, 255, 0.7) ;
+		}
+
+		/* Estilos para la caja de datos */
+		#cajadatos {
+
+		    float: left;
+		    width: 400px;
+		    margin-left: 20px;
+		    padding: 20px;
+		    border: 1px solid #999999;
+		    background-color:rgba(255, 255, 255, 0.7) ;
+		    padding: 20px;
+		    font-size: 18px;
+		    color: #333;
+		}
+		/* Estilos para los campos de entrada */
+		#clave,#texto {
+		    width: 200px;
+		}
+		h1,h2{
+		    text-align: center;
+		    display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco con transparencia */
+		  width: 100%; /* Ajusta al ancho que necesites */
+		  height: 100%; /* Ajusta al alto que necesites */
+		}
+		/* Estilos para los elementos dentro de la caja de datos */
+		#cajadatos > div {
+		    border-bottom: 1px solid #999999;
+		    background-color:rgba(255, 255, 255, 0.7) ;
+		    padding: 20px;
+		    font-size: 18px;
+		    color: #333;
+
+		}
+		#grabar,#eliminar{
+		    width: 200px; /* Ancho deseado */
+		    height: 40px; /* Alto deseado */
+		}
+	</style>
+	<script>
+		function iniciar(){
+		var boton=document.getElementById('grabar');
+		boton.addEventListener('click', nuevoitem, false);
+		mostrar();
+		}
+		function nuevoitem(){
+		var clave=document.getElementById('clave').value;
+		var valor=document.getElementById('texto').value;
+		localStorage.setItem(clave,valor);
+		mostrar();
+		document.getElementById('clave').value='';
+		document.getElementById('texto').value='';
+		}
+		function mostrar(){
+		var cajadatos=document.getElementById('cajadatos');
+		cajadatos.innerHTML='';
+		for(var f=0;f<localStorage.length;f++){
+		var clave=localStorage.key(f);
+		var valor=localStorage.getItem(clave);
+		cajadatos.innerHTML+='<div>'+clave+' - '+valor+'</div>';
+		}
+		}
+		window.addEventListener('load', iniciar, false);
+		function elimina()
+		{
+
+			if(confirm('Está Seguro?')){
+				localStorage.clear();
+				mostrar();
+				}
+		}
+	</script>
+</head>
+<body>
+<header>
+	<nav>
+            <a href="BD (2).html" class="nav-link">Inicio</a>
+            <a href="history (1).html" class="nav-link">Historia</a>
+            <a href="OB (1).html" class="nav-link">Objetivo</a>
+            <div class="dropdown">
+                <a href="#" class="nav-link">Más <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="impacto (1).html">Impacto</a>
+                    <a href="situacion (1).html">Situación Actual</a>
+                    <a href="vision (1).html">Visión a Futuro</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#"class="nav-link">Recursos <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                    <a href="imagenes (1).html">Imágenes</a>
+                    <a href="Videos (1).html">Videos</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#"class="nav-link">información de contacto <i class="fas fa-caret-down"></i></a></a>
+                <div class="dropdown-content">
+                  <a href="ForContacto.html">Contactanos</a>
+                  <a href="Redes (1).html">Redes</a>
+                </div>
+            </div>
+            <a href="Blog (1).html" class="nav-link">Blog</a>
+            <a href="FormularioBigData (1).html" class="nav-link">Cuestionario</a>
+        </nav>
+</header>
+</br>
+	<h1 class="poetsen-one-regular">Blog de notas </h1>
+	<h2>Realiza las notas que necesites</h2>
+	<section id="cajaformulario">
+		<form name="formulario">
+			<p>Tema: <br><input type="text" name="clave" id="clave"></p>
+			<p>Información: <br><textarea name="text" id="texto"></textarea></p>
+			<p><input type="button" name="grabar" id="grabar"
+			value="Guardar"></p>
+			<p><input type="button" name="eliminar" id="eliminar"
+			value="Borrar datos" onclick="elimina()"></p>
+		</form>
+	</section>
+	<section id="cajadatos">
+	Aún no registras información
+	</section>
+</body>
+</html>
